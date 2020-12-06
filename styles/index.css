@@ -101,7 +101,7 @@ body {
 	clip-path: circle(100% at 50% 170%);
 	transition: 2s;
 	display: block;
-	height: 300px;
+	height: 320px;
 	transition: 2s;
 	border-radius: 20px;
 }
