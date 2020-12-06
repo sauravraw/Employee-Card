@@ -1,0 +1,115 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+.main-conatiner {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.head-part {
+	margin-bottom: 100px;
+}
+#root {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.employee-card {
+	margin: 34px;
+	width: 250px;
+	min-height: 300px;
+	box-shadow: 0 0 15px 1px rgba(52, 52, 52, 0.224);
+	position: relative;
+	border-radius: 20px;
+	transition: 2s;
+}
+
+.employee-card:hover {
+	box-shadow: 0 0 25px 1px rgba(52, 52, 52, 0.25);
+}
+
+.employee-card::after {
+	margin-top: -30px;
+	content: " ";
+	background-image: linear-gradient(135deg, #fff720 10%, crimson 100%);
+	clip-path: circle(50% at 50% 1%);
+	display: block;
+	height: 300px;
+	transition: 2s;
+	border-radius: 20px;
+}
+
+.employee-card:hover::after {
+	content: " ";
+	clip-path: circle(100% at 50% 170%);
+	transition: 2s;
+	display: block;
+	height: 300px;
+	transition: 2s;
+	border-radius: 20px;
+}
+
+img {
+	width: 100px !important;
+	height: 100px !important;
+	position: absolute;
+	margin: 75px;
+	z-index: 99999999;
+	transition: 2s;
+	border-radius: 100%;
+	border: 2px solid black;
+}
+
+h1 {
+	z-index: 999;
+	position: absolute;
+	justify-content: center;
+	display: flex;
+	width: 100%;
+	font-size: 24px;
+	font-family: "poppins bold";
+	color: rgba(30, 29, 29, 0.85);
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 0px rgba(37, 37, 37, 0.421);
+}
+h3 {
+	z-index: 999;
+	margin-left: 75px;
+	position: absolute;
+	display: flex;
+	top: 55%;
+	font-family: "poppins";
+	color: rgba(30, 29, 29, 0.85);
+	text-shadow: 1.5px 1.5px 0px rgba(37, 37, 37, 0.306);
+}
+
+p {
+	z-index: 999;
+	margin: 70px 0 0 3px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	top: 50%;
+	font-family: "poppins";
+	color: rgba(30, 29, 29, 0.85);
+	text-shadow: 1.5px 1.5px 0px rgba(37, 37, 37, 0.306);
+}
+span {
+	z-index: 999;
+	margin: 90px 0 0 3px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	top: 50%;
+	font-family: "poppins";
+	color: rgba(30, 29, 29, 0.85);
+	text-shadow: 1.5px 1.5px 0px rgba(37, 37, 37, 0.306);
+}
