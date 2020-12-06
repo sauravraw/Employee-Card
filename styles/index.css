@@ -1,15 +1,67 @@
 body {
 	padding: 0;
 	margin: 0;
+	background: linear-gradient(to right, #536976, #292e49);
 }
 .main-conatiner {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 }
-.head-part {
-	margin-bottom: 100px;
+
+.ribbon {
+	font-size: 16px !important;
+	width: 50%;
+
+	position: relative;
+	background: linear-gradient(to right, #cc2b5e, #753a88);
+	color: #fff;
+	text-align: center;
+	padding: 1em 2em; /* Adjust to suit */
+	margin: 48px auto 100px; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
 }
+.ribbon:before,
+.ribbon:after {
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -1em;
+	border: 1.5em solid #986794;
+	z-index: -1;
+}
+.ribbon:before {
+	left: -2em;
+	border-right-width: 1.5em;
+	border-left-color: transparent;
+}
+.ribbon:after {
+	right: -2em;
+	border-left-width: 1.5em;
+	border-right-color: transparent;
+}
+.ribbon .ribbon-content:before,
+.ribbon .ribbon-content:after {
+	content: "";
+	position: absolute;
+	display: block;
+	border-style: solid;
+	border-color: #804f7c transparent transparent transparent;
+
+	bottom: -1em;
+}
+.ribbon h1 {
+	font-family: "poppins bold";
+	text-shadow: 8.5px 8.5px 0px rgba(37, 37, 37, 0.306);
+}
+.ribbon .ribbon-content:before {
+	left: 0;
+	border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+	right: 0;
+	border-width: 1em 1em 0 0;
+}
+
 #root {
 	margin: 0 auto;
 	display: flex;
@@ -22,6 +74,7 @@ body {
 	margin: 34px;
 	width: 250px;
 	min-height: 300px;
+	background-color: white;
 	box-shadow: 0 0 15px 1px rgba(52, 52, 52, 0.224);
 	position: relative;
 	border-radius: 20px;
@@ -64,7 +117,7 @@ img {
 	border: 2px solid black;
 }
 
-h1 {
+h2 {
 	z-index: 999;
 	position: absolute;
 	justify-content: center;
@@ -95,6 +148,7 @@ p {
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: center;
+	font-size: 13px;
 	top: 50%;
 	font-family: "poppins";
 	color: rgba(30, 29, 29, 0.85);
@@ -102,7 +156,7 @@ p {
 }
 span {
 	z-index: 999;
-	margin: 90px 0 0 3px;
+	margin: 100px 0 0 3px;
 	position: absolute;
 	display: flex;
 	flex-direction: column;
